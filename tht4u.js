@@ -64,24 +64,29 @@
     }
 
     function destroyMessage() {
-      localStorage.setItem("messageDestroyed", "true");
-      messageEl.classList.add("fade-out");
-      setTimeout(() => {
-        messageEl.innerHTML = "";
-        statusEl.textContent = "Message destroyed";
-        countdownText.style.display = "none";
-        document.getElementById("progressBarWrapper").style.display = "none";
-      }, 1000);
-    }
+  localStorage.setItem("messageDestroyed", "true");
+  messageEl.classList.add("fade-out");
+  setTimeout(() => {
+    messageEl.innerHTML = "";
+    statusEl.textContent = "Message destroyed";
+    countdownText.style.display = "none";
+    document.getElementById("progressBarWrapper").style.display = "none";
 
-    function checkIfDestroyed() {
-      if (localStorage.getItem("messageDestroyed") === "true") {
-        messageEl.innerHTML = "";
-        statusEl.textContent = "Message destroyed";
-        countdownText.style.display = "none";
-        document.getElementById("progressBarWrapper").style.display = "none";
-      } else {
-        startCountdown();
-      }
-    }
-    checkIfDestroyed();
+    
+    document.getElementById("leaveThought").style.display = "inline-block";
+  }, 1000);
+}
+
+function checkIfDestroyed() {
+  if (localStorage.getItem("messageDestroyed") === "true") {
+    messageEl.innerHTML = "";
+    statusEl.textContent = "Message destroyed";
+    countdownText.style.display = "none";
+    document.getElementById("progressBarWrapper").style.display = "none";
+
+    
+    document.getElementById("leaveThought").style.display = "inline-block";
+  } else {
+    startCountdown();
+  }
+}
