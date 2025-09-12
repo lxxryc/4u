@@ -202,3 +202,16 @@
       text-align:center;
 
     }
+
+    #leaveThought {
+  display: none; 
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: white;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: background .3s;
+}
