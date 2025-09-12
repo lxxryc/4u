@@ -90,3 +90,5 @@ function checkIfDestroyed() {
     startCountdown();
   }
 }
+
+checkIfDestroyed();
