@@ -64,7 +64,7 @@
       padding:24px;
       width:100%;
       max-width:420px;
-      min-height:176px;
+      min-height:160px;
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -200,4 +200,5 @@
       margin-top:8px;
       font-size:.9rem;
       text-align:center;
+
     }
