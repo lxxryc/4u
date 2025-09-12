@@ -1,4 +1,4 @@
- const FIXED_DURATION = 30; 
+ const FIXED_DURATION = 10;
   
 
     const messageEl = document.getElementById("message");
