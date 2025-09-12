@@ -1,4 +1,4 @@
- const FIXED_DURATION = 360;
+ const FIXED_DURATION = 15;
   
 
     const messageEl = document.getElementById("message");
@@ -92,3 +92,4 @@ function checkIfDestroyed() {
 }
 
 checkIfDestroyed();
+
