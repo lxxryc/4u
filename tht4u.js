@@ -1,9 +1,9 @@
   const FIXED_DURATION = 10;  
-  const THOUGHT_VERSION = "T:1";  
+  const THOUGHT_VERSION = "T:2";  
   const THOUGHT_TEXT = {
-    text: "if clouds weren’t just water vapor but carried faint whispers of every place they passed over, then when it rained, you’d hear fragments of stories, laughter, or secrets falling with the drops.",
-    author: "adsila",
-    link: "https://web.facebook.com/profile.php?id=61552797368814"
+    text: "there's a verse in the Bible that says, as a man thinketh in his heart, so is he. Your thoughts lead to actions, actions determine habits, habits determine patterns of behavior, and your behavior determines the outcome of your life..",
+    author: "tap",
+    link: "https://www.facebook.com/share/16zPsE3HH1/"
   };
   
 
