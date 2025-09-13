@@ -1,7 +1,7 @@
   const FIXED_DURATION = 10;  
-  const THOUGHT_VERSION = "T:2";  
+  const THOUGHT_VERSION = "T:2.0";  
   const THOUGHT_TEXT = {
-    text: "there's a verse in the Bible that says, as a man thinketh in his heart, so is he. Your thoughts lead to actions, actions determine habits, habits determine patterns of behavior, and your behavior determines the outcome of your life..",
+    text: "there's a verse in the Bible that says, as a man thinketh in his heart, so is he. Your thoughts lead to actions, actions determine habits, habits determine patterns of behavior, and your behavior determines the outcome of your life.",
     author: "tap",
     link: "https://www.facebook.com/share/16zPsE3HH1/"
   };
