@@ -1,30 +1,45 @@
- const FIXED_DURATION = 15;
+  const FIXED_DURATION = 10;  
+  const THOUGHT_VERSION = "T:1";  
+  const THOUGHT_TEXT = {
+    text: "if clouds weren’t just water vapor but carried faint whispers of every place they passed over, then when it rained, you’d hear fragments of stories, laughter, or secrets falling with the drops.",
+    author: "adsila",
+    link: "https://web.facebook.com/profile.php?id=61552797368814"
+  };
   
 
-    const messageEl = document.getElementById("message");
-    const statusEl = document.getElementById("status");
-    const progressBar = document.getElementById("progressBar");
-    const countdownText = document.getElementById("countdownText");
-    const toggleBtn = document.getElementById("toggleTheme");
+  const messageEl = document.getElementById("message");
+  const statusEl = document.getElementById("status");
+  const leaveBtn = document.getElementById("leaveThought");
+  const modalOverlay = document.getElementById("modalOverlay");
+  const thoughtForm = document.getElementById("thoughtForm");
+  const formMessage = document.getElementById("formMessage");
 
-    const modalOverlay = document.getElementById("modalOverlay");
-    const leaveBtn = document.getElementById("leaveThought");
-    const thoughtForm = document.getElementById("thoughtForm");
-    const formMessage = document.getElementById("formMessage");
+  function renderThought() {
+    messageEl.innerHTML = `
+      <blockquote>
+        ${THOUGHT_TEXT.text}
+        <span class="author">— <a href="${THOUGHT_TEXT.link}" target="_blank">${THOUGHT_TEXT.author}</a></span>
+      </blockquote>
+    `;
+  }
 
-    toggleBtn.onclick = () => {
-      document.body.classList.toggle("dark");
-      toggleBtn.textContent = document.body.classList.contains("dark") ? "🌞" : "🌙";
-    };
-
+ 
+  if (leaveBtn) {
     leaveBtn.onclick = () => { modalOverlay.style.display = "flex"; };
+  }
+
+
+  if (modalOverlay) {
     modalOverlay.onclick = (e) => {
       if (e.target === modalOverlay) {
         modalOverlay.style.display = "none";
         formMessage.textContent = "";
       }
     };
+  }
 
+  
+  if (thoughtForm) {
     thoughtForm.addEventListener("submit", async function(e) {
       e.preventDefault();
       formMessage.textContent = "Sending...";
@@ -44,52 +59,38 @@
         formMessage.textContent = "Message not sent";
       }
     });
-
-    function computeDuration() {
-      const text = messageEl.innerText.trim();
-      return Math.max(10, Math.ceil(text.length / 12));
-    }
-
-    function startCountdown() {
-      let remaining = FIXED_DURATION ?? computeDuration();
-      const duration = remaining;
-      const timer = setInterval(() => {
-        remaining--;
-        progressBar.style.width = (remaining / duration) * 100 + "%";
-        if (remaining <= 0) {
-          clearInterval(timer);
-          destroyMessage();
-        }
-      }, 1000);
-    }
-
-    function destroyMessage() {
-  localStorage.setItem("messageDestroyed", "true");
-  messageEl.classList.add("fade-out");
-  setTimeout(() => {
-    messageEl.innerHTML = "";
-    statusEl.textContent = "Message destroyed";
-    countdownText.style.display = "none";
-    document.getElementById("progressBarWrapper").style.display = "none";
-
-    
-    document.getElementById("leaveThought").style.display = "inline-block";
-  }, 1000);
-}
-
-function checkIfDestroyed() {
-  if (localStorage.getItem("messageDestroyed") === "true") {
-    messageEl.innerHTML = "";
-    statusEl.textContent = "Message destroyed";
-    countdownText.style.display = "none";
-    document.getElementById("progressBarWrapper").style.display = "none";
-
-    
-    document.getElementById("leaveThought").style.display = "inline-block";
-  } else {
-    startCountdown();
   }
-}
 
-checkIfDestroyed();
+  function startCountdown() {
+    let remaining = FIXED_DURATION;
+    const timer = setInterval(() => {
+      remaining--;
+      if (remaining <= 0) {
+        clearInterval(timer);
+        destroyMessage();
+      }
+    }, 1000);
+  }
 
+  function destroyMessage() {
+    localStorage.setItem("messageDestroyed:" + THOUGHT_VERSION, "true");
+    messageEl.classList.add("fade-out");
+    setTimeout(() => {
+      messageEl.innerHTML = "";
+      statusEl.textContent = "Message destroyed";
+      leaveBtn.style.display = "inline-block";
+    }, 1000);
+  }
+
+  function checkIfDestroyed() {
+    if (localStorage.getItem("messageDestroyed:" + THOUGHT_VERSION) === "true") {
+      messageEl.innerHTML = "";
+      statusEl.textContent = "Message destroyed";
+      leaveBtn.style.display = "inline-block";
+    } else {
+      renderThought();
+      startCountdown();
+    }
+  }
+
+  checkIfDestroyed();
