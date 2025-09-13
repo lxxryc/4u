@@ -1,18 +1,5 @@
-
     :root {
-      --bg:#f9fafb;
-      --text:#111827;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --accent:#4b5563;
-      --accent-2:#9ca3af;
-      --danger:#dc2626;
-      --divider:#e5e7eb;
-      --shadow:0 8px 20px rgba(0,0,0,.08);
-      --radius:14px;
-    }
-    body.dark {
-      --bg:#111827;
+      --bg:#111827;    
       --text:#f9fafb;
       --muted:#9ca3af;
       --card:#1f2937;
@@ -21,6 +8,7 @@
       --danger:#ef4444;
       --divider:#374151;
       --shadow:0 8px 20px rgba(0,0,0,.4);
+      --radius:14px;
     }
     *{margin:0;padding:0;box-sizing:border-box}
     body{
@@ -33,29 +21,9 @@
       justify-content:center;
       align-items:center;
       padding:16px;
-      transition:background .3s,color .3s;
     }
-    #countdownText {
-      font-weight:600;
-      font-size:1rem;
-      text-align:center;
-      margin-bottom:10px;
-      color:var(--danger);
-    }
-    #progressBarWrapper {
-      width:80%;
-      max-width:420px;
-      height:8px;
-      background:var(--divider);
-      border-radius:6px;
-      overflow:hidden;
-      margin-bottom:14px;
-    }
-    #progressBar {
-      height:100%;
-      background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      width:100%;
-      transition:width 1s linear;
+    #countdownText, #progressBarWrapper {
+      display: none;  
     }
     #messageBox {
       background:var(--card);
@@ -70,7 +38,6 @@
       flex-direction:column;
       justify-content:center;
       text-align:center;
-      transition:background .3s,color .3s;
     }
     #message blockquote {
       font-size:1.05rem;
@@ -91,7 +58,6 @@
       display:block;
       margin-top:8px;
       font-size:.95rem;
-      font-style:normal;
       color:var(--muted);
     }
     #message .author a {
@@ -105,22 +71,16 @@
       margin-top:8px;
       text-align:center;
     }
-    .after-text {
-      display:block;
-      margin-top:6px;
-      font-size:.9rem;
-      color:var(--muted);
-    }
     #leaveThought {
-      margin-top:15px;
-      padding:10px 16px;
-      border:none;
-      border-radius:var(--radius);
-      background:var(--accent);
-      color:white;
-      font-size:.9rem;
-      cursor:pointer;
-      transition:background .3s;
+      display: none; 
+      margin-top: 15px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: var(--radius);
+      background: var(--accent);
+      color: white;
+      font-size: .9rem;
+      cursor: pointer;
     }
     #leaveThought:hover {
       background:var(--accent-2);
@@ -131,22 +91,10 @@
       color:var(--muted);
       text-align:center;
     }
-    #toggleTheme {
-      position:absolute;
-      top:10px;
-      right:10px;
-      background:none;
-      border:none;
-      font-size:1.5rem;
-      cursor:pointer;
-      color:var(--text);
-      transition:transform 0.2s;
-    }
-    #toggleTheme:hover { transform:scale(1.1); }
     .fade-out { animation: fade 1s forwards; }
     @keyframes fade { from { opacity:1; } to { opacity:0; } }
 
-    /* Modal */
+    
     #modalOverlay {
       display:none;
       position:fixed;
@@ -201,18 +149,4 @@
       margin-top:8px;
       font-size:.9rem;
       text-align:center;
-
     }
-
-    #leaveThought {
-    display: none; 
-    margin-top: 15px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: var(--radius);
-    background: var(--accent);
-    color: white;
-    font-size: .9rem;
-    cursor: pointer;
-    transition: background .3s;
-  }
