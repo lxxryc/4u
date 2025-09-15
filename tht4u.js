@@ -1,14 +1,15 @@
-const FIXED_DURATION = 20;  
-    const THOUGHT_VERSION = "9:15:11:55";  
+const FIXED_DURATION = 30;  
+    const THOUGHT_VERSION = "9:15:16:15.";  
 
     const THOUGHT_TEXT = {
       paragraphs: [
-       "you deserve more than that. you deserve wholeness. you deserve love that doesn’t ask you to shrink. you deserve respect that doesn’t come with conditions.",
-       "the moment you embrace your true self. the moment you know your worth. you stop allowing people to devalue you. you stop accepting leftovers and cheap love because you finally understand: this is not what you were made for.",
-       "yes, life has seasons. hardships come. and it’s easy to look at others and compare. but your journey is yours, and when you carry self-love at the center of it, you'll no longer settle for less than you were created to receive.",
+       "in life, you'll become the happiest version of yourself when you realize that you have no power over what they say or think. you only have power over what you say or do, or believe about yourself. because at the end of the day, you have no authority to change anyone's perspective or mind or view.",
+       "you have no power over them. why? because it's their brain, their heart, their life. they can treat you well, they can treat you poorly. that's not up to you. all you can do is show up the way you want to show up. all you can do is love the way you want to love. all you can do is be the person you authentically are, and let that be what plays the card out.",
+       "i can't stress this enough: we can't change what people say, we can't change what people do. but we can change how we interact with them. we can change the access they have to us. we can change the perspective we have of them, because we often put people on such high pedestals that even when they're terrible to us we convince ourselves they’re good.",
+       "but just because we want something to be true, doesn’t mean it is. so i need you to understand this: you can’t change their mind, you can’t change their thought pattern, you can’t change what they desire. but you can absolutely change where you are in their lives.",
         
       ],
-      author: "tap",
+      author: "ry",
       link: "https://www.facebook.com/share/16zPsE3HH1/"
     };
 
