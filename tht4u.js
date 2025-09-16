@@ -1,5 +1,5 @@
-const FIXED_DURATION = 30;  
-    const THOUGHT_VERSION = "9:15:16:15.";  
+const FIXED_DURATION = 60;  
+    const THOUGHT_VERSION = "9:16:23:03.";  
 
     const THOUGHT_TEXT = {
       paragraphs: [
