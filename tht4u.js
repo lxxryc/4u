@@ -3,10 +3,11 @@ const FIXED_DURATION = 30;
 
     const THOUGHT_TEXT = {
       paragraphs: [
-       "in life, you'll become the happiest version of yourself when you realize that you have no power over what they say or think. you only have power over what you say or do, or believe about yourself. because at the end of the day, you have no authority to change anyone's perspective or mind or view.",
-       "you have no power over them. why? because it's their brain, their heart, their life. they can treat you well, they can treat you poorly. that's not up to you. all you can do is show up the way you want to show up. all you can do is love the way you want to love. all you can do is be the person you authentically are, and let that be what plays the card out.",
-       "i can't stress this enough: we can't change what people say, we can't change what people do. but we can change how we interact with them. we can change the access they have to us. we can change the perspective we have of them, because we often put people on such high pedestals that even when they're terrible to us we convince ourselves they’re good.",
-       "but just because we want something to be true, doesn’t mean it is. so i need you to understand this: you can’t change their mind, you can’t change their thought pattern, you can’t change what they desire. but you can absolutely change where you are in their lives.",
+       "stop feeling bad for doing what you had to do in a place that you tried to do everything in. stop feeling bad for having to walk away from a situation, from a person, from a place, from a thing that you gave so much of yourself to, and nothing was ever given back to you.",
+       "you have to stop feeling bad for doing the best thing for you, for doing the thing that's gonna serve you, for doing the thing that seems hard right now but is actually the best possible choice for your life.",
+       "sometimes we feel bad because we think that if we keep trying, or keep pushing, or keep working, that one day they'll finally see what we offer, see who we are. but in the process, you end up breaking your own heart trying to force people into places they clearly don't want to be.",
+       "stop feeling bad for doing what's right for you, because at the end of the day, the only person who's guaranteed to care about you is you. if you keep trying to force yourself to be smaller, little, or less than what you deserve just so somebody can stick around, you will continue to hate the person you've become—because it's not you.",
+       "it's a diminished version of you that you kept holding onto, because you thought it was all you wanted or could ever have. and you can't keep hurting yourself just to get other people to like you.",
         
       ],
       author: "ry",
